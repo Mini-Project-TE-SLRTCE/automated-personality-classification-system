@@ -17,13 +17,13 @@ dataset = pd.read_csv("training-dataset.csv")
 # converted "dateset" into "numpy array"
 datasetValues = dataset.values
 
-# replacing "Male" with 1
-# and "Female" with 0
+# replacing "Male" with 0
+# and "Female" with 1
 for i in range(len(datasetValues)):
     if datasetValues[i][0] == "Male":
-        datasetValues[i][0] = 1
-    else:
         datasetValues[i][0] = 0
+    else:
+        datasetValues[i][0] = 1
 
 # framing modified data into table
 # using numpy's DataFrame
@@ -97,21 +97,21 @@ def reset(event):
 
 # gui window ------------------------------------
 
-#creating main window
+# creating main window
 w = Tk()
 
-#title of main window
+# title of main window
 w.title("Automatic Personality Prediction System")
 
-#size of main window
+# size of main window
 w.geometry("830x700")
 
-#background colour of main window
+# background colour of main window
 w.configure(background = '#fff')
 
 # heading ---------------------------------------
 
-heading = Label(w, text = "Automatic Personality Prediction System", bg = '#fff', font = ('algerian', 16))
+heading = Label(w, text = "Automatic  Personality  Prediction  System", bg = '#fff', font = ('algerian', 16))
 heading.config(pady = 35)
 heading.pack()
 
@@ -123,8 +123,8 @@ label_chooseGender.place(x = 50, y = 90)
 
 gender = IntVar()
 
-genderMale = Radiobutton(w, text = "Male", variable = gender, value = 1, bg = '#fff', font = ('calibri', 14))
-genderFemale = Radiobutton(w, text = "Female", variable = gender, value = 0, bg = '#fff', font = ('calibri', 14))
+genderMale = Radiobutton(w, text = "Male", variable = gender, value = 0, bg = '#fff', font = ('calibri', 14))
+genderFemale = Radiobutton(w, text = "Female", variable = gender, value = 1, bg = '#fff', font = ('calibri', 14))
 
 genderMale.select()
 genderFemale.deselect()
