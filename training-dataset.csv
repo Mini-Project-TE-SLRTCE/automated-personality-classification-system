@@ -1,4 +1,4 @@
-Gender,Age,openness,neuroticism,conscientiousness,agreeableness,extraversion,Personality (Class label)
+gender,age,openness,neuroticism,conscientiousness,agreeableness,extraversion,personality
 Male,17,7,4,7,3,2,extraverted
 Male,19,4,5,4,6,6,serious
 Female,18,7,6,4,5,5,dependable
